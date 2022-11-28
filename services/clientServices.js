@@ -94,3 +94,10 @@ exports.deleteData = function (req, res) {
     )  
      
 };
+
+// getImageFromClient
+
+exports.getImage = (req, res) => {
+    const image = req.image;
+      res.json({message: 'File uploaded successfully.', image});
+};

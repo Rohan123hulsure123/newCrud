@@ -8,6 +8,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
     extended: true
 }));
+//Make uploads folder public
+app.use('/uploads',express.static(`${__dirname}/uploads`));
 
 mongoose.connect("mongodb://localhost:27017/ClientDB",{useNewUrlParser:true,useUnifiedTopology:true})
 const db=mongoose.connection
